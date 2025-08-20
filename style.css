@@ -1,0 +1,278 @@
+/* --- Google Font & Font Awesome --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* --- CSS Variables for Easy Customization --- */
+:root {
+    --primary-color: #007bff;
+    --primary-hover-color: #0056b3;
+    --dark-color: #2c3e50;
+    --light-color: #f8f9fa;
+    --gray-color: #bdc3c7;
+    --text-color: #34495e;
+    --white-color: #ffffff;
+    --card-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    --border-radius: 8px;
+}
+
+/* --- General & Reset Styles --- */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.7;
+    background-color: var(--light-color);
+    color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+h1, h2, h3 {
+    color: var(--dark-color);
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+/* --- Header & Navigation --- */
+header {
+    background: var(--white-color);
+    color: var(--dark-color);
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #branding h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+header #branding a {
+    color: var(--dark-color);
+    text-decoration: none;
+}
+
+header nav ul {
+    list-style: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 25px;
+}
+
+header nav ul li a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+header nav ul li a:hover,
+header nav ul li a.active {
+    color: var(--primary-color);
+}
+
+/* --- Main Content --- */
+main {
+    flex-grow: 1;
+    padding: 40px 0;
+}
+
+.card {
+    background: var(--white-color);
+    padding: 25px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--card-shadow);
+    margin-bottom: 2rem;
+}
+
+/* --- Buttons --- */
+.button {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background: var(--primary-hover-color);
+    transform: translateY(-2px);
+}
+
+/* --- Hero Section --- */
+#hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://via.placeholder.com/1500x600') no-repeat center center/cover;
+    color: var(--white-color);
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#hero h1 {
+    font-size: 3.5rem;
+    color: var(--white-color);
+}
+
+#hero p {
+    font-size: 1.3rem;
+}
+
+/* --- Feature Grid (Home Page) --- */
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    text-align: center;
+}
+
+.feature-grid .card i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+/* --- Two-Column Layout --- */
+.two-column-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+}
+
+/* --- Contact Form --- */
+#contact-form input, #contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* --- Dashboard Page --- */
+.dashboard-layout {
+    display: flex;
+    gap: 30px;
+}
+
+.sidebar {
+    flex: 1;
+    max-width: 250px;
+}
+
+.main-content {
+    flex: 3;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+}
+
+.sidebar-nav a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: var(--text-color);
+    border-radius: 5px;
+    margin-bottom: 5px;
+    font-weight: 500;
+}
+
+.sidebar-nav a:hover, .sidebar-nav a.active {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+
+/* --- Footer --- */
+footer {
+    background: var(--dark-color);
+    color: var(--gray-color);
+    padding: 40px 0;
+    margin-top: auto;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+}
+
+.footer-grid h4 {
+    color: var(--white-color);
+    margin-bottom: 1rem;
+}
+
+.footer-grid a {
+    color: var(--gray-color);
+    text-decoration: none;
+    display: block;
+    margin-bottom: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.footer-grid a:hover {
+    color: var(--primary-color);
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #444;
+}
+
+/* --- Responsive Design --- */
+@media(max-width: 768px) {
+    header .container {
+        flex-direction: column;
+    }
+    header nav {
+        margin-top: 15px;
+    }
+    #hero h1 {
+        font-size: 2.5rem;
+    }
+    .two-column-layout, .dashboard-layout {
+        grid-template-columns: 1fr;
+        flex-direction: column;
+    }
+    .sidebar {
+        max-width: 100%;
+    }
+}
